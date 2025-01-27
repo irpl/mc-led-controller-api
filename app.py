@@ -4,6 +4,7 @@ from pydantic import BaseModel
 app = FastAPI()
 
 color_dictionary = {
+  "WHITE": 0xFFFFFF,
   "BLACK": 0x0,
   "ORANGE": 0xff6500,
   "MAGENTA": 0xff00ff,
