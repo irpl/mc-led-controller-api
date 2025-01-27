@@ -6,13 +6,13 @@ app = FastAPI()
 class Color(BaseModel):
   rgb: int
 
-current_color = 0
+current_color: Color = Color(0)
 
 @app.post("/color")
 async def set_color(color: Color):
   current_color = color
-  return "color set to " + current_color
+  return "color set to " + str(current_color.rgb)
 
 @app.get("/color")
 async def get_color():
-  return current_color
+  return current_color.rgb
