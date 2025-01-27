@@ -16,4 +16,4 @@ async def set_color(color: Color):
 
 @app.get("/color")
 async def get_color():
-  return current_color.rgb
+  return current_color
